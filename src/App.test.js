@@ -27,19 +27,10 @@ test('renders loading text initially', () => {
   const loadingElement = screen.getByText(/loading.../i);
   expect(loadingElement).toBeInTheDocument();
 });
-
 test('renders fetched data after loading', async () => {
   render(<App />);
-  
-  // Debug: Log the rendered output
-  console.log(screen.debug());
-
-  // Wait for the MainRouteComponent to appear after loading completes
   await waitFor(() => {
-    // Check if the customer name is in the document
     expect(screen.getByText(/Sai/i)).toBeInTheDocument();
   });
-
-  // Check that the loading text is no longer displayed
   expect(screen.queryByText(/loading.../i)).toBeNull();
 });
