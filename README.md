@@ -83,7 +83,7 @@ Bussiness logic should be covered in `bussinessLogic.js` file.
 ### Test Files
 
 I have return each test file for each and every component created.
-And All the test cases are passed with test coverage of
+And All the test cases are passed with test coverage of 95%
 
 ------------------------|---------|----------|---------|---------|-------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
