@@ -39,6 +39,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -68,3 +69,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Info About Application
+
+Bussiness logic should be covered in `bussinessLogic.js` file.
+
+1. From `App.js` file you can find fetching data from `userData.json` which is the data set present in `public` folder
+2. Sending Memoized  Customers data to `MainRouteComponent` component present in Components folder.
+3. In `MainRouteComponent` caluculate each cutomer points by using `calculateCustomerPoints` function under `bussinessLogic.js` file
+4. Passing each customer info to two childers under `mainRouteComponent`. One is `CustomerName` to display customer name and `CustomerPoints` to display the Customer points.
+
+### Test Files
+
+I have return each test file for each and every component created.
+And All the test cases are passed with test coverage of
+
+------------------------|---------|----------|---------|---------|-------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------|---------|----------|---------|---------|-------------------
+All files               |   96.15 |      100 |     100 |      96 |                   
+ src                    |   93.33 |      100 |     100 |   92.85 |                   
+  App.js                |   93.33 |      100 |     100 |   92.85 | 15                
+ src/Components         |     100 |      100 |     100 |     100 |                   
+  CustomerPoints.js     |     100 |      100 |     100 |     100 |                   
+  CustomersName.js      |     100 |      100 |     100 |     100 |                   
+  MainRouteComponent.js |     100 |      100 |     100 |     100 |                   
+------------------------|---------|----------|---------|---------|-------------------
+
