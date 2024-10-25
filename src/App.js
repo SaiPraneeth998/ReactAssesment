@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import MainRouteComponent from "./Components/MainRouteComponent";
 
 const App = () => {
@@ -19,13 +19,14 @@ const App = () => {
     };
     fetchData();
   }, []);
+  const memoizedCustomers = useMemo(() => customers, [customers]);
 
   return (
     <>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <MainRouteComponent customers={customers} />
+        <MainRouteComponent customers={memoizedCustomers} />
       )}
     </>
   );

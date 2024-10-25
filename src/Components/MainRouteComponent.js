@@ -27,4 +27,4 @@ const MainRouteComponent = ({ customers }) => {
   );
 };
 
-export default MainRouteComponent;
+export default React.memo(MainRouteComponent);

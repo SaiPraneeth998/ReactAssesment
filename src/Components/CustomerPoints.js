@@ -7,4 +7,4 @@ const CustomerPoints = ({ month, points }) => {
     </p>
   );
 };
-export default CustomerPoints;
+export default React.memo(CustomerPoints);
